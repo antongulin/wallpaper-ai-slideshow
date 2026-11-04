@@ -76,11 +76,11 @@ Please note that these costs are subject to change. Check OpenAI's current prici
 - Internet connection
 
 ## 👨‍💻 Author & Contact
-**Anton Rosh**
-- 🌐 Website: [www.senimsoft.com](http://www.antonrosh.dev)
-- 📧 Email: me@antonrosh.dev
-- 💼 LinkedIn: [linkedin.com/in/anton-gulin](https://linkedin.com/in/antonrosh)
-- 🐱 GitHub: [github.com/anton-gulin](https://github.com/antonrosh)
+**Anton Gulin**
+- 🌐 Website: [anton.qa](https://www.anton.qa)
+- 📧 Email: i@anton.qa
+- 💼 LinkedIn: [linkedin.com/in/antongulin](https://www.linkedin.com/in/antongulin)
+- 🐱 GitHub: [github.com/antongulin](https://github.com/antongulin)
 
 Feel free to reach out for questions, suggestions, or collaborations!
 
