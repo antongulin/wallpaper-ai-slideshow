@@ -10,11 +10,11 @@ from PyInstaller.utils.hooks import collect_all, collect_submodules
 
 # Add version info at the top
 VSVersionInfo = {
-    'CompanyName': 'Anton Rosh',
+    'CompanyName': 'Anton Gulin',
     'FileDescription': 'Wallpaper AI Slideshow',
     'FileVersion': '1.0.0',
     'InternalName': 'wallpaper_ai_slideshow',
-    'LegalCopyright': '© 2024 Anton Rosh',
+    'LegalCopyright': '© 2024 Anton Gulin',
     'OriginalFilename': 'wallpaper_ai_slideshow.exe',
     'ProductName': 'Wallpaper AI Slideshow',
     'ProductVersion': '1.0.0'

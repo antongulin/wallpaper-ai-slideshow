@@ -1,9 +1,9 @@
 """
 Wallpaper AI Slideshow
-Author: Anton Rosh
+Author: Anton Gulin
 Version: 1.0.0
 License: MIT
-Copyright (c) 2024 Anton Rosh
+Copyright (c) 2024 Anton Gulin
 """
 
 # Standard library imports
