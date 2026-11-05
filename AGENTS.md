@@ -23,7 +23,7 @@ Maintainer and author: Anton Gulin (i@anton.qa, https://www.anton.qa).
 | --- | --- |
 | `wallpaper_ai_slideshow.py` | Application: GUI, tray, generation, upscaling, wallpaper rotation |
 | `wallpaper_ai_slideshow.spec` | PyInstaller build recipe, including Windows version-info metadata |
-| `config.py` | Shared pricing constants for DALL-E 2 and DALL-E 3 |
+| `config.py` | Pricing constants, currently unused by the application |
 | `requirements.txt` | Runtime and packaging dependencies |
 | `app_icon.ico` | Application icon |
 | `README.md` | User-facing description, costs, requirements, contact |
