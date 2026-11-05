@@ -17,7 +17,7 @@ Maintainer and author: Anton Gulin (i@anton.qa, https://www.anton.qa).
 - The repository is normally archived and read-only. Work only while a task explicitly restores it, and restore the archived state when that task ends.
 - Every change lands on a task branch and a pull request. Executable changes (Python, `.spec`, workflow YAML) never go straight to `main`.
 - Merge small cohesive pull requests with squash, subject to the repository's actual merge settings and required checks.
-- Tracked files (nine at present):
+- Tracked files:
 
 | Path | Role |
 | --- | --- |
@@ -30,6 +30,8 @@ Maintainer and author: Anton Gulin (i@anton.qa, https://www.anton.qa).
 | `LICENSE` | MIT license, 2024 Anton Gulin |
 | `.github/workflows/build.yml` | Windows build and release workflow |
 | `.github/workflows/code-review.yml` | Caller for the shared Robin review workflow |
+| `AGENTS.md` | Root agent instructions and DOX index |
+| `docs/dox-LICENSE.txt` | Upstream DOX MIT notice |
 
 ## Local Contracts
 
@@ -57,7 +59,7 @@ Maintainer and author: Anton Gulin (i@anton.qa, https://www.anton.qa).
 
 - **Identity-only edits.** Change the literal string and nothing else. Preserve every other byte, including comments, imports, runtime functions, packaging calls, and whitespace.
 - **`wallpaper_ai_slideshow.spec` is not importable.** Executing or importing it deletes `build/` and `dist/`, then runs a PyInstaller `Analysis`. Never run it to check a change; parse it statically.
-- **`version_info=VSVersionInfo` in the spec** is existing PyInstaller `EXE` API usage. Whether a produced EXE embeds these strings is unverified here; only a Windows build could demonstrate it. Do not claim it.
+- **`version_info=VSVersionInfo` in the spec** is an existing keyword argument in the recipe, unchanged by identity-only edits. Keyword support and embedding these strings in an EXE are unverified here. A successful Windows build and resource inspection are needed before claiming either.
 - **Dependencies are loose.** `requirements.txt` lists `pillow`, `requests`, `pywin32>=306`, `psutil>=5.9.0`, `cryptography>=41.0.0`, `pystray>=0.19.0`, `ttkbootstrap>=1.10.0` with no lockfile. Never state installed, resolved, or verified versions.
 - **Windows-only at import time.** `win32api`, `win32con`, `win32gui`, `win32process`, `win32event`, `winerror`, and the desktop wallpaper calls mean the module cannot be imported on Linux or macOS. Do not attempt it as a check.
 - **Runtime state stays out of Git.** The app writes `api_key.enc` and `encryption_key.key` in the working directory, `generated_wallpapers/` with `generated_wallpapers/metadata.json`, and scratch files under the system temp directory. API keys are stored encrypted with Fernet on the user's machine; never commit, print, or log key material.
@@ -78,7 +80,7 @@ Maintainer and author: Anton Gulin (i@anton.qa, https://www.anton.qa).
 
 ## Child DOX Index
 
-None. Nine tracked files, one owner, no nested durable boundary. Add a child `AGENTS.md` only when a directory gains its own rules, workflow, or quality bar, such as a future test suite.
+None. One owner, no nested durable boundary. Add a child `AGENTS.md` only when a directory gains its own rules, workflow, or quality bar, such as a future test suite.
 
 ## Source Provenance
 
